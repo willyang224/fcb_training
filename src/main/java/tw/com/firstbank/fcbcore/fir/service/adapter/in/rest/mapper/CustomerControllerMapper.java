@@ -1,6 +1,7 @@
 package tw.com.firstbank.fcbcore.fir.service.adapter.in.rest.mapper;
 
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import tw.com.firstbank.fcbcore.fir.service.adapter.in.rest.api.CreateCustomerRequest;
 import tw.com.firstbank.fcbcore.fir.service.adapter.in.rest.api.CreateCustomerResponse;
 import tw.com.firstbank.fcbcore.fir.service.adapter.in.rest.api.DeleteCustomerResponse;
@@ -21,13 +22,23 @@ import tw.com.firstbank.fcbcore.fir.service.application.in.customer.api.UpdateCu
 @Mapper(componentModel = "spring")
 public interface CustomerControllerMapper {
 
+
   GetCustomersResponse toGetCustomersResponse(GetCustomersResponseCommand source);
+
+  @Mapping(source = "accountNo", target = "accountNo")
   GetCustomerRequestCommand toGetCustomerRequestCommand(String accountNo);
+
   GetCustomerResponse toGetCustomerResponse(GetCustomerResponseCommand source);
+
   DeleteCustomerRequestCommand toDeleteCustomerRequestCommand(String accountNo);
+
   DeleteCustomerResponse toDeleteCustomerResponse(DeleteCustomerResponseCommand source);
+
   CreateCustomerRequestCommand toCreateCustomerRequestCommand(CreateCustomerRequest source);
+
   CreateCustomerResponse toCreateCustomerResponse(CreateCustomerResponseCommand source);
+
   UpdateCustomerRequestCommand toUpdateCustomerRequestCommand(String accountNo, UpdateCustomerRequest source);
+
   UpdateCustomerResponse toUpdateCustomerResponse(UpdateCustomerResponseCommand source);
 }

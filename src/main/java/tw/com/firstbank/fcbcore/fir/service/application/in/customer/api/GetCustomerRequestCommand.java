@@ -10,4 +10,6 @@ import tw.com.firstbank.fcbcore.fir.service.application.in.core.RequestCommand;
 @ToString
 public class GetCustomerRequestCommand implements RequestCommand {
 
+  private String accountNo;
+
 }

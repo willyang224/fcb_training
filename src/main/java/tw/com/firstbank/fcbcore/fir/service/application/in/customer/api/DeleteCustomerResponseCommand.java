@@ -10,4 +10,6 @@ import tw.com.firstbank.fcbcore.fir.service.application.in.core.ResponseCommand;
 @ToString
 public class DeleteCustomerResponseCommand implements ResponseCommand {
 
+  private String statusCode;
+
 }
