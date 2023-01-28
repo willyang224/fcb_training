@@ -3,7 +3,7 @@ Configuration:
   properties:
     property:
     - name: ContextName
-      value: NEWBIE_SCHOOL
+      value: fcb
     - name: LogFolderPath
       value: AppLog
     - name: Charset
